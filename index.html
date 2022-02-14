@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mobileMenu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Controle Financeiro</title>
+  </head>
+
+  <body>
+    <header>  
+      <div   class = "mobileMenu">
+      <input type  = "checkbox" id = "check" />
+      <label for   = "check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <div class = "barra">
+          <nav>
+            <a href = ""><div class = "link">Resumo</div></a>
+            <a href = ""><div class = "link">Dashboard</div></a>
+            <a href = ""><div class = "link">Configurações</div></a>
+          </nav>
+        </div>
+      </div>
+      <nav>
+        <img src="Ellipse 13.png" alt="Imagem do Controle Financeiro" />
+        <h1>Controle Financeiro</h1>
+        <ul>
+          <li href="#Dashboard">Dashboard</li>
+          <span class="line"> | </span>
+          <li href="#Resumo">Resumo</li>
+          <span class="line"> | </span>
+          <li href="#Configuracoes">Configurações</li>
+        </ul>
+      </nav>
+    </header>
+
+    <body>
+      <div class="container">
+        <div class="box1">
+          <form>
+            <h2>Nova transação</h2>
+            <h3 class="textType">Tipo de transação</h3>
+            <select class="select" name="transacoes" id="column">
+              <option class="option" value="Compra" placeholder="Compra">
+                Compra
+              </option>
+            </select>
+            <h3 class="nomeMercadoria">Nome da mercadoria</h3>
+            <input class="inputNome" id="column"  type="text" placeholder="Input" />
+            <h3 class="textValue">Valor</h3>
+            <input class="inputValor" id="column" type="number" placeholder="R$ 0,00" />
+            <button>Adicionar transação</button>
+          </form>
+        </div>
+        <div class="box2">
+          <h2 class="extrato">Extrato de transações</h2>
+          <table cellspacing="0">
+            <thead>
+              <tr>
+                <th class="signal"></th>
+                <th class="title">Mercadoria</th>
+                <th class="titleValue" >Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="signal">+</td>
+                <td class="text">Lorem ipsum dolor sit amet consectetur</td>
+                <td class="value">R$ 12.999,99</td>
+              </tr>
+              <tr>
+                <td class="signal">-</td>
+                <td class="text">Quis nostrud exercitation</td>
+                <td class="value">R$ 99,99</td>
+              </tr>
+              <tr>
+                <td class="signal">+</td>
+                <td class="text">Lorem ipsum</td>
+                <td class="value">R$ 9,99</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="border">
+                <td class="signal"></td>
+                <td class="text"></td>
+                <td class="value"></td>
+              </tr>
+              <tr class="top">
+                <td class="signal"></td>
+                <th class="total">Total</th>
+                <td class="totalValue">
+                  <p>R$ 12.909,99</p>
+                  <p><small>[LUCRO]</small></p>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <footer></footer>
+    </body>
+  </body>
+</html>

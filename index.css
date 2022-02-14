@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Lato";
+  color: #000000;
+  font-weight: 300;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background: #e0e0e0;
+
+  align-items: center;
+}
+
+img {
+  width: 40px;
+  height: 36.84px;
+}
+
+nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  color: #333333;
+  font-size: 14px;
+  line-height: 25px;
+  gap: 20px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+header nav {
+  position: static;
+  top: 0;
+}
+
+.line {
+  display: flex;
+  width: 1px;
+  height: 30px;
+  border: 1px solid #e0e0e0;
+  border-width: 0px;
+  margin-top: 0px;
+  rotate: 90º;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  gap: 10px;
+  background: #ffffff;
+}
+
+li {
+  display: flex;
+  cursor: pointer;
+  align-content: inherit;
+}
+
+form {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-left: 10px;
+  font-size: 14px;
+  align-self: flex-start;
+  line-height: 35px;
+}
+
+select {
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #979797;
+  font-size: 14px;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 95%;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #979797;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.inputValor {
+  text-align: start;
+}
+
+button {
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+
+  background: #333333;
+  border-radius: 4px;
+  color: #ffffff;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  max-width: 1120px;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  gap: 20px;
+}
+
+.box1 {
+  flex-grow: 2;
+}
+
+.box2 {
+  flex-grow: 3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.extrato {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  width: 100%;
+}
+
+.signal {
+  text-align: center;
+  width: 10%;
+}
+
+.title {
+  text-align: left;
+}
+
+.titleValue {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.inputNome {
+  text-indent: 10px;
+}
+
+.inputValor {
+  text-indent: 10px;
+}
+
+.option {
+  text-indent: 10px;
+}
+
+td {
+  padding: 1px;
+  border-top: 1px solid #979797;
+}
+
+th {
+  font-weight: 700;
+}
+
+.text {
+  width: 15%;
+}
+
+.total {
+  border-top: 1px solid #979797;
+  font-weight: 700;
+  text-align: start;
+}
+
+.value {
+  text-align: end;
+  width: 20%;
+  width: 30%;
+  padding-right: 10px;
+}
+
+.totalValue p {
+  font-weight: 700;
+  text-align: end;
+  padding-right: 10px;
+}
+
+.border {
+  margin-top: -10px;
+}
+
+.small {
+  border: none;
+  font-size: 10px;
+}
+
+h3 .textValue {
+  margin-left: 10px;
+}
+
+.signal {
+  width: 3%;
+  /*   padding-top: 5px;
+  padding-bottom: 5px; */
+}
+
+small {
+  font-size: 10px;
+}
+
+footer {
+  float: right;
+  display: flex;
+  width: 100%;
+  height: 8px;
+  position: absolute;
+  bottom: 0;
+  background: #333333;
+}
+
+@media screen and (max-width: 1112px) {
+  nav {
+    margin-left: 22px;
+  }
+
+  header nav {
+    margin-right: 20px;
+  }
+
+  .box1 {
+    margin-left: 20px;
+  }
+
+  .box2 {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+   .container{
+    max-width: 768px;
+  }
+
+  body {
+    height: 1024px;
+  }
+
+  h1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  header {
+    height: 60px;
+  }
+  nav {
+    gap: calc(50% - 200px / 2);
+  }
+
+  ul {
+    display: none;
+  }
+
+  img {
+    width: 30px;
+    height: 27.63px;
+  }
+
+  .box1 {
+    width: 90%;
+    margin-right: 30px;
+    font-size: 14px;
+  }
+
+  .box1 h2 {
+    font-size: 18px;
+    width: 100%;
+    margin-top: -10px;
+    text-align: center;
+  }
+
+  form {
+    height: 180px;
+    flex-flow: wrap;
+  }
+
+  .box1 h3 {
+    font-size: 14px;
+    margin-top: -25px;
+    margin-left: 12px;
+  }
+
+  .box1 h3 .nomeMercadoria {
+    margin-right: 50px;
+  }
+
+  form h3 {
+    margin-left: 10px;
+  }
+
+  .select {
+    width: 150px;
+    margin-top: -15px;
+    margin-left: -98px;
+  }
+
+  .inputNome {
+    width: 348px;
+    margin-top: -15px;
+    margin-left: -115px;
+  }
+
+  .inputValor {
+    width: 150px;
+    margin-top: -15px;
+    margin-left: -25px;
+  }
+
+  button {
+    width: 200px;
+    margin-left: 510px;
+    margin-top: -35px;
+    border-radius: 4px;
+  }
+
+  .box2 {
+    margin-left: 20px;
+    font-size: 14px;
+    height: 281px;
+  }
+
+  .text {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  body {
+    height: 731px;
+  }
+
+  .box1 {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-right: -10px;
+  }
+
+  h1 {
+    font-weight: 700;
+  }
+
+  .box1 h3 {
+    margin-left: 0;
+    margin-top: 1px;
+  }
+
+  form {
+    width: 90%;
+    height: 260px;
+    border: none;
+    border-bottom: 1px solid #979797;
+    border-radius: 0;
+    margin-top: 10px;
+  }
+
+  .box1 h2 {
+    display: none;
+  }
+
+  .textType {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .select {
+    width: 100%;
+    margin-top: -5px;
+    margin-left: 0px;
+  }
+
+  .nomeMercadoria {
+    margin-top: -10px;
+    margin-left: 0px;
+  }
+
+  .inputNome {
+    width: 100%;
+    margin-top: -5px;
+    margin-left: 0px;
+  }
+
+  .textValue {
+    margin-top: 0px;
+  }
+
+  .inputValor {
+    width: 100%;
+    margin-top: -5px;
+    margin-left: 0px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+
+  .box2 {
+    margin-top: 0px;
+    margin-left: 20px;
+  }
+
+  .text {
+    width: 38%;
+  }
+}
