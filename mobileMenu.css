@@ -1,16 +1,15 @@
 * {
   margin: 0px;
   padding: 0px;
-
 }
 
 body {
   background-color: #f9f9f9;
 }
+
 .mobileMenu {
   display: none;
 }
-
 
 .barra {
   background-color: #333333;
@@ -36,7 +35,6 @@ body {
   color: #333333;
 } */
 
-
 .barra nav {
   width: -100%;
   position: fixed;
@@ -54,7 +52,6 @@ body {
   text-indent: 180px;
 }
 
-
 .link {
   color: #ffffff;
   font-family: "Lato";
@@ -65,17 +62,16 @@ body {
   opacity: 0;
   margin-top: 200px;
   margin-right: 22px;
-  text-indent: 150px;
+  text-indent: 80px;
 }
 
 /* #check:checked ~ .barra {
   transform: translateX(-300px);
 }
  */
-
- #check:checked ~ .barra {
+#check:checked ~ .barra {
   right: 0;
-  }
+}
 
 #check:checked ~ .barra nav a .link {
   opacity: 1;
@@ -84,7 +80,7 @@ body {
   display: flex;
 }
 
-label {
+label1 {
   cursor: pointer;
   position: absolute;
   height: 22px;
@@ -94,7 +90,7 @@ label {
   z-index: 1;
 }
 
-label span {
+label1 span {
   position: absolute;
   display: block;
   height: 5px;
@@ -104,29 +100,29 @@ label span {
   transition: 0.25s ease-in-out;
 }
 
-label span:nth-child(1) {
+label1 span:nth-child(1) {
   top: 15px;
 }
-label span:nth-child(2) {
+label1 span:nth-child(2) {
   top: 25px;
 }
-label span:nth-child(3) {
+label1 span:nth-child(3) {
   top: 35px;
 }
 
-#check:checked + label span:nth-child(1) {
-  transform: translateX(-230px) rotate(-45deg);
+#check:checked + label1 span:nth-child(1) {
+  transform: translateX(-220px) rotate(-45deg);
   top: 20px;
 }
-#check:checked + label span:nth-child(2) {
+#check:checked + label1 span:nth-child(2) {
   opacity: 0;
 }
-#check:checked + label span:nth-child(3) {
-  transform: translateX(-230px) rotate(45deg);
+#check:checked + label1 span:nth-child(3) {
+  transform: translateX(-220px) rotate(45deg);
   top: 20px;
 }
 
-#check:checked + label span {
+#check:checked + label1 span {
   background-color: #ffffff !important;
 }
 
@@ -138,16 +134,12 @@ label span:nth-child(3) {
   .mobileMenu {
     display: block;
   }
-
- /*  body {
-    height: 1024px;
-  } */
 }
 
 @media screen and (max-width: 411px) {
-	.mobileMenu {
-		display: block;
-	}
+  .mobileMenu {
+    display: block;
+  }
 
   body {
     height: 731px;
@@ -157,8 +149,7 @@ label span:nth-child(3) {
     width: 350px;
     right: -350px;
   }
-	.barra nav a{
-		text-indent: 220px;
-	}
-} 
-
+  .barra nav a {
+    text-indent: 220px;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "controle_financeiro",
+  "version": "1.0.0",
+  "description": "Controle Financeiro",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest",
+    "jest": "jest --env=jsdom testes/",
+    "jest:watch": "jest --env=jsdom --watch testes/",
+    "jest:coverage": "jest --env=jsdom --coverage testes/",
+    "jest:memory": "jest --env=node --logHeapUsage testes/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielleIzawa/controlefinanceiro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielleIzawa/controlefinanceiro/issues"
+  },
+  "homepage": "https://github.com/DanielleIzawa/controlefinanceiro#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}

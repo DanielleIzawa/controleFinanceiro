@@ -18,36 +18,49 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap"
       rel="stylesheet"
     />
-
+    <script defer src="/script.js"></script>
     <title>Controle Financeiro</title>
   </head>
 
   <body>
-    <header>  
-      <div   class = "mobileMenu">
-      <input type  = "checkbox" id = "check" />
-      <label for   = "check">
+    <header>
+      <div class="mobileMenu">
+        <input type="checkbox" id="check" />
+        <label1 class="label1" for="check">
           <span></span>
           <span></span>
           <span></span>
-        </label>
-        <div class = "barra">
+        </label1>
+        <div class="barra">
           <nav>
-            <a href = ""><div class = "link">Resumo</div></a>
-            <a href = ""><div class = "link">Dashboard</div></a>
-            <a href = ""><div class = "link">Configurações</div></a>
+            <a href=""><div class="link">Cadastro de transações</div></a>
+            <a href="" id="delete" type="button"
+              ><div
+                class="link"
+                onclick="confirmationMessage()"
+                onclick="delet()"
+              >
+                Limpar dados
+              </div></a
+            >
           </nav>
         </div>
       </div>
+
       <nav>
         <img src="Ellipse 13.png" alt="Imagem do Controle Financeiro" />
         <h1>Controle Financeiro</h1>
         <ul>
-          <li href="#Dashboard">Dashboard</li>
+          <li href="#cadastroDeTransacoes">Cadastro de transações</li>
           <span class="line"> | </span>
-          <li href="#Resumo">Resumo</li>
-          <span class="line"> | </span>
-          <li href="#Configuracoes">Configurações</li>
+          <li
+            href="#limparDados"
+            type="button"
+            onclick="confirmationMessage()"
+            onclick="delet()"
+          >
+            Limpar dados
+          </li>
         </ul>
       </nav>
     </header>
@@ -55,48 +68,50 @@
     <body>
       <div class="container">
         <div class="box1">
-          <form>
+          <form id="formTransation" onsubmit="add(event)">
             <h2>Nova transação</h2>
-            <h3 class="textType">Tipo de transação</h3>
-            <select class="select" name="transacoes" id="column">
-              <option class="option" value="Compra" placeholder="Compra">
-                Compra
-              </option>
-            </select>
-            <h3 class="nomeMercadoria">Nome da mercadoria</h3>
-            <input class="inputNome" id="column"  type="text" placeholder="Input" />
-            <h3 class="textValue">Valor</h3>
-            <input class="inputValor" id="column" type="number" placeholder="R$ 0,00" />
-            <button>Adicionar transação</button>
+            <label class="textType" id="textLabel" for="type"
+              >Tipo de transação
+              <select class="select" required name="type" id="type">
+                <option class="option" value="-">Compra</option>
+                <option class="option" value="+">Venda</option>
+              </select>
+            </label>
+            <label class="nomeMercadoria" id="textLabel" for="name"
+              >Nome da mercadoria
+              <input
+                class="inputNome"
+                required
+                id="name"
+                type="text"
+                placeholder="Mercadoria"
+              />
+            </label>
+            <label class="textValue" id="textLabel" for="value"
+              >Valor
+              <input
+                class="inputValor"
+                required
+                id="value"
+                type="text"
+                placeholder="0,00"
+                onkeyup="formatarMoeda(this);"
+              />
+            </label>
+            <button type="submit">Adicionar transação</button>
           </form>
         </div>
         <div class="box2">
           <h2 class="extrato">Extrato de transações</h2>
-          <table cellspacing="0">
+          <table cellspacing="0" id="extratoTransacoes" onsubmit="delet(event)">
             <thead>
               <tr>
                 <th class="signal"></th>
-                <th class="title">Mercadoria</th>
-                <th class="titleValue" >Valor</th>
+                <th class="title" id="mercadoria">Mercadoria</th>
+                <th class="titleValue" id="valor">Valor</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td class="signal">+</td>
-                <td class="text">Lorem ipsum dolor sit amet consectetur</td>
-                <td class="value">R$ 12.999,99</td>
-              </tr>
-              <tr>
-                <td class="signal">-</td>
-                <td class="text">Quis nostrud exercitation</td>
-                <td class="value">R$ 99,99</td>
-              </tr>
-              <tr>
-                <td class="signal">+</td>
-                <td class="text">Lorem ipsum</td>
-                <td class="value">R$ 9,99</td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
             <tfoot>
               <tr class="border">
                 <td class="signal"></td>
@@ -107,12 +122,13 @@
                 <td class="signal"></td>
                 <th class="total">Total</th>
                 <td class="totalValue">
-                  <p>R$ 12.909,99</p>
-                  <p><small>[LUCRO]</small></p>
+                  <p></p>
+                  <p><small></small></p>
                 </td>
               </tr>
             </tfoot>
           </table>
+          <div class="message" id="text"></div>
         </div>
       </div>
       <footer></footer>
