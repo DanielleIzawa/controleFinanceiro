@@ -8,63 +8,8 @@
   font-weight: 300;
 }
 
-header {
-  display: flex;
-  width: 100%;
-  height: 80px;
-  background: #e0e0e0;
-
-  align-items: center;
-}
-
-img {
-  width: 40px;
-  height: 36.84px;
-}
-
-nav {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-  color: #333333;
-  font-size: 14px;
-  line-height: 25px;
-  gap: 20px;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-header nav {
-  position: static;
-  top: 0;
-}
-
-.line {
-  display: flex;
-  width: 1px;
-  height: 30px;
-  border: 1px solid #e0e0e0;
-  border-width: 0px;
-  margin-top: 0px;
-  rotate: 90º;
-}
-
-ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  /* margin-left: auto; */
-  margin-left: 50%;
-  width: 25%;
-  background: #ffffff;
-}
-
-li {
-  display: flex;
-  cursor: pointer;
-  align-content: inherit;
+.boxForm {
+  width: 33%;
 }
 
 form {
@@ -76,7 +21,7 @@ form {
   background: #ffffff;
   border: 1px solid #979797;
   border-radius: 4px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 h2 {
@@ -89,11 +34,11 @@ h2 {
 }
 
 label {
-  margin-left: 10px;
   font-size: 14px;
-  align-self: flex-start;
+  /* align-self: flex-start; */
+  align-items: center;
   line-height: 35px;
-  text-indent: 10px;
+  margin-left: 10px;
 }
 
 select {
@@ -102,8 +47,8 @@ select {
   border: 1px solid #979797;
   font-size: 14px;
   height: 32px;
+  margin-left: 9px;
   margin-bottom: 10px;
-  margin-left: 10px;
 }
 
 input {
@@ -111,14 +56,12 @@ input {
   border-radius: 4px;
   border: 1px solid #979797;
   line-height: 30px;
+  margin-left: 9px;
   margin-bottom: 10px;
-  margin-left: 10px;
 }
 
-button {
-  width: 93%;
-  align-items: center;
-  justify-content: center;
+form button {
+  width: 95%;
   margin-bottom: 10px;
 
   background: #333333;
@@ -126,23 +69,21 @@ button {
   color: #ffffff;
   line-height: 30px;
   font-size: 14px;
-  margin-left: 20px;
+  margin-left: 9px;
 }
 
 .container {
   display: flex;
-  max-width: 1100px;
+  max-width: 1070px;
   margin: 0 auto;
   flex-flow: row wrap;
   gap: 20px;
 }
 
-.box1 {
-  flex-grow: 2;
-}
-
-.box2 {
+.boxTable {
+  width: 60%;
   flex-grow: 3;
+  margin-top: 55px;
 }
 
 table {
@@ -156,6 +97,7 @@ table {
   font-weight: 700;
   font-size: 18px;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .signal {
@@ -186,7 +128,10 @@ table {
 
 td {
   padding: 1px;
-  border-top: 1px solid #979797;
+}
+
+lineTable {
+  margin-top: 1px;
 }
 
 th {
@@ -205,9 +150,10 @@ th {
 
 .value {
   text-align: end;
-  width: 20%;
   width: 30%;
   padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .totalValue p {
@@ -220,9 +166,8 @@ th {
   margin-top: -10px;
 }
 
-.small {
+small {
   border: none;
-  font-size: 10px;
 }
 
 h3 .textValue {
@@ -231,25 +176,40 @@ h3 .textValue {
 
 .signal {
   width: 3%;
-  /*   padding-top: 5px;
-  padding-bottom: 5px; */
+}
+
+.line{
+  height: 5px;
+}
+
+tr {
+  border-bottom: 1px solid #979797;
+}
+
+thead th {
+  padding-bottom: 10px;
+}
+
+tfoot tr:last-of-type {
+  border-bottom: none;
+  border-top: 1px solid #979797;
+  margin-top: 2px;
 }
 
 small {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 footer {
-  float: right;
   display: flex;
   width: 100%;
   height: 8px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background: #333333;
 }
 
-.message{
+.message {
   margin-top: 100px;
   font-weight: 700;
   font-size: 25px;
@@ -257,31 +217,9 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 1112px) {
-  nav {
-    margin-left: 22px;
-  }
-
-  header nav {
-    margin-right: 20px;
-  }
-
-  .box1 {
-    margin-left: 20px;
-  }
-
-  .box2 {
-    margin-right: 40px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-   .container{
-    max-width: 768px;
-  }
-
-  body {
-    height: 1024px;
+@media screen and (max-width: 991px) {
+  .container {
+    width: 99%;
   }
 
   h1 {
@@ -302,112 +240,124 @@ footer {
     display: none;
   }
 
-  img {
+  .left-wrapper img {
+    margin-left: 10px;
     width: 30px;
     height: 27.63px;
   }
 
-  .box1 {
-    margin-right: 25px;
+  .boxForm {
+    width: 97%;
     font-size: 14px;
+    margin-left: 15px;
   }
-  
-  .box1 form{
+
+  .boxForm form {
     grid-template-columns: 1fr 2fr 1fr;
     height: 200px;
   }
 
-    .box1 h2 {
+  .boxForm h2 {
     grid-column: 1/4;
     text-align: center;
     margin-top: 0px;
-  } 
-
-  .textValue{
-    margin-right: 20px;
   }
 
-  .inputNome{
-    margin-left: 10px;
+  .inputValor {
+    margin-left: -2px;
   }
 
-  button{
-    margin-bottom:10px ;
+  form button {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: -15%;
     grid-column: 3;
-    margin-left: -5px;
-   
+    width: 110%;
   }
 
-  .box2 {
-    margin-left: 20px;
+  small {
     font-size: 14px;
-    height: 281px;
+  }
+
+  .boxTable {
+    font-size: 14px;
+  }
+
+  table {
+    width: 97%;
+    margin-top: -10px;
+    margin-left: 15px;
+  }
+
+  .extrato {
+    margin-bottom: 40px;
   }
 
   .text {
     width: 15%;
   }
-  .message{
+
+  .message {
     font-size: 20px;
   }
 }
 
-@media screen and (max-width: 411px) {
-  body {
-    height: 731px;
+@media screen and (max-width: 760px) {
+  .boxForm {
+    margin-left: 12px;
   }
 
-  .box1 {
-    width: 100%;
-    margin-top: 0px;
-  }
-
-    
   h1 {
     font-weight: 700;
   }
 
-  .box1 label {
+  .boxForm label {
     margin-left: 0;
     margin-top: 1px;
   }
 
-  .box1 form{
+  .boxForm form {
     display: block;
-    height: 350px;
-    width: 100%;
-    height: 290px;
+    height: 300px;
     border: none;
     border-bottom: 1px solid #979797;
     border-radius: 0;
-    margin-top: 10px;
+    margin-top: 26px;
     margin-left: 0px;
   }
 
-  button{
-    width: 95%;
-    margin-left: 10px;
+  form button {
+    width: 100%;
+    margin-left: 0px;
     margin-top: 5px;
   }
 
-  label{
-    text-indent: 10px;
-  }
-
-  .box1 h2 {
+  .boxForm h2 {
     display: none;
   }
 
-  .box2 {
-    margin-top: 0px;
-    margin-left: 20px;
+  .select {
+    width: 100%;
+    margin-left: 0px;
   }
 
-  .text {
-    width: 38%;
+  .inputNome {
+    width: 100%;
+    margin-left: 0;
   }
 
-  .message{
+  .inputValor {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .boxTable {
+    margin-top: 10px;
+    margin-left: -2px;
+    margin-right: 5px;
+  }
+
+  .message {
     font-size: 18px;
   }
 }
